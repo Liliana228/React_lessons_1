@@ -5,7 +5,7 @@ import foto from "./img/preview часть 5.png"
 
 class App extends React.Component {
 
-constructor(props) {
+constructor(props) { //для добавления состояний
          super(props);
          this.state = {
                   Text: "Help yext", //Значение по умолчанию
@@ -14,14 +14,19 @@ constructor(props) {
         this.inputClick = this.inputClick.bind(this) // регистрация событий (только для собственных)
 }
 
+    componentDidUpdate(prevProps) {
+      if (this.state.helpText !== "Help")
+        console.log("Some")
+    }
+
   render() {
-    return (<div>
+    return (<div> 
       <Header title= "one"/>
       <Header title="yep:p"/>
-      <Header title= "0"/>
+      <Header />
       <h1 
          
-         onClick={this.TextClick}
+         onClick={this.TextClick} // this.props - только если речь идет о классе (class). Есди это функция (const), то без this
          onMouseEnter={this.TextMouseOver}>
          {this.state.Text} 
       </h1>
