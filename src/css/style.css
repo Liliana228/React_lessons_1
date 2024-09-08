@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
          margin: 0;
          padding: 0;
@@ -6,18 +8,105 @@
 body {
          background-color: #505050;
          color:aliceblue;
+         font-family: "PT Sans", sans-serif;
+         font-weight: 400;
+         font-style: normal;
+
 }
 
 .hhh {
          background-color: black;
-         padding: 10px;
+         padding: 20px 40px; /*сверху/снизу 20рх, справа/слева 40рх*/
+
+         font-weight: 700;
+         font-style: normal;
 }
-.foto1 {
-         width: 200px;
-         height: 120px;
+main {
+         margin: 20px 40px;
+         /* width: 1%; */
+         float: left; /*позиционирование*/
+}
+
+aside {
+        /* float: right; */
+         margin-top: 40px;
+         margin-left: 20px;
+ 
+         width: 60%;
+}
+
+main .user {
+         padding: 20px;
+         width: 400px;
+         background-color: #4d7ab8;
+         border-radius: 4px;
+         margin-bottom: 20px;
+         box-shadow: 2px 2px 2px #00000038;
          
 }
-.foto2 {
-         width: 400px;
-         height: 230px;
+
+main .usersEmpty {
+         width: 100%;
+         padding: 40px;
+         background-color: #e9dede13;
+         
+}
+
+main .close-icon {
+         float: right;
+         color: rgb(177, 198, 255);
+         width: 24px;
+         height: 24px;
+         opacity: 0,5;
+}
+main .edit-icon {
+         float: right;
+         margin-right: 8px;
+         color: rgb(177, 198, 255);
+         width: 24px;
+         height: 24px;
+         opacity: 0,5;
+}
+
+main .close-icon:hover {
+         opacity: 100%;
+         color: #ffadbb;
+}
+
+main .edit-icon:hover {
+         opacity: 100%;
+         color: rgb(210, 222, 255);
+
+}
+aside form input:not([type="checkbox"]), 
+aside form button {
+         font-family: "PT Sans", sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 16px;
+         /* vertical-align: baseline; */
+
+         padding: 12px;
+         width: 90%;
+         margin-bottom: 8px;
+         background-color: #5d5e5f;
+         outline: none;
+         border: 0;
+         border-radius: 4px;
+}
+
+aside form input:not[type="checkbox"] {
+         margin: 12px;
+}
+
+aside form button {
+       width: 100%;
+         cursor: pointer;
+         transition: transform 500ms ease;
+         background-color: #6baf7f;
+}
+
+aside form button:hover {
+          background-color: #73c28b;
+          transform: scale(1.05);
 }
