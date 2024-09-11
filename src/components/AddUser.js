@@ -26,7 +26,15 @@ class AddUser extends React.Component {
                         <label htmlFor="Married">Женат/Замужем</label>  
                         <input type="checkbox" id="Married" 
                         onChange={(e) => this.setState({Married: e.target.checked})}/>  
-                        <button type="button">Добавить</button> 
+                        <button type="button" onClick={
+                              () => this.props.onAdd({
+                                    Name: this.state.Name,
+                                    Surname: this.state.Surname,
+                                    Email: this.state.Email,
+                                    Age: this.state.Age,
+                                    Married: this.state.Married,
+                              })
+                        }>Добавить</button> 
                   </form>
            )
 
