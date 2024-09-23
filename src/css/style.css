@@ -78,8 +78,9 @@ main .edit-icon:hover {
          color: rgb(210, 222, 255);
 
 }
-aside form input:not([type="checkbox"]), 
-aside form button {
+form input,
+/* :not([type="checkbox"]),  */
+form input {
          font-family: "PT Sans", sans-serif;
          font-weight: 400;
          font-style: normal;
@@ -89,24 +90,33 @@ aside form button {
          padding: 12px;
          width: 90%;
          margin-bottom: 8px;
-         background-color: #5d5e5f;
+         background-color: rgba(255, 255, 255, 0.486);
+         color: rgb(0, 0, 0);
          outline: none;
          border: 0;
          border-radius: 4px;
 }
 
-aside form input:not[type="checkbox"] {
-         margin: 12px;
-}
 
-aside form button {
+/* form input:not[type="checkbox"] {
+         margin: 12px;
+         background-color: rgba(7, 255, 119, 0.671);
+         color: red;
+} */
+
+form button {
        width: 100%;
+       padding: 12px 20px;
          cursor: pointer;
          transition: transform 500ms ease;
-         background-color: #6baf7f;
+         background-color: #4ac774;
 }
 
-aside form button:hover {
+form button:hover {
           background-color: #73c28b;
-          transform: scale(1.05);
+          
+}
+
+.user form {
+  margin-top: 20px;
 }

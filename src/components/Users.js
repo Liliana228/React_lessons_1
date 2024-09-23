@@ -13,7 +13,11 @@ class Users extends React.Component {
          return (
            <div>
                   {this.props.users.map((element) => ( //this так как это class. Мы тут обращаемся к классу users и задаем метод map (заранее известную), чтобы перебрать массив users. 
-                   <User key={element.id} user={element}/>        
+                   <User 
+                   onEdit={this.props.onEdit}
+                   onDelete={this.props.onDelete} 
+                   key={element.id} user={element}
+                   />        
                   ))}
                    </div>)
            else
